@@ -1,13 +1,17 @@
 package etec.projetoii.ProjetoEtec;
 
-/**
- * Hello world!
- *
- */
+import java.sql.Connection;
+
+import etec.pcii.projetopcii.percistence.Conexao;
+
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws Exception
     {
-        System.out.println( "Hello World!" );
+    	
+    	
+    	
+    	Connection mysqlConnection = new Conexao().getMysqlConnection();
+    	System.out.println(mysqlConnection);
     }
 }
