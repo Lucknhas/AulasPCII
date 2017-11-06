@@ -1,0 +1,127 @@
+<!doctype html>
+<?php
+	
+	session_start();
+	
+	if(!isset($_SESSION["prontuario"]) || !isset($_SESSION["senha"])) {
+	
+		header("Location: Index.html");
+	
+	}
+	
+?>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cadastro de Usuário - SAP</title>
+		<link rel="Stylesheet" type="text/css" href="CSS/CSS.css" />
+		<link rel="Stylesheet" type="text/css" href="CSS/Form.css" />
+	</head>
+
+	<body>
+		<div id="container">
+				<div id="header"></div>
+				
+			
+				<input type="checkbox" id="bt_menu">
+				<label for="bt_menu">&#9776;</label>
+			
+				<nav class="menu">
+					<ul>
+						<li>
+							<a href="Home.html">Inicio</a>
+						</li>
+					</ul>
+					
+					<ul>
+						<li><a href="#">Cadastros</a>
+							<ul>
+								<li>
+									<a href="CadastroEstagiario.html">Estagiário</a>
+								</li>
+								
+								<li>
+									<a href="CadastroFuncionario.html">Terceirizado</a>
+								</li>
+							
+								<li>
+									<a href="CadastroUsuarioSAP.html">Usuário SAP</a>
+								</li>
+							</ul>
+						</li>
+						
+						<li><a href="#">Consultar</a>
+							<ul>
+								<li>
+									<a href="ConsultaEstagiario.php">Estagiario</a>
+								</li>
+								
+								<li>
+									<a href="ConsultaFuncionario.php">Terceirizado</a>
+								</li>
+								
+								<li>
+									<a href="ConsultaUsuarioSAP.php">Usuário SAP</a>
+								</li>
+							</ul>
+						</li>
+						
+						<li><a href="#">Questionários</a>
+							<ul>
+								<li>
+									<a href="QuestionarioAvaliacao.php">Avaliações dos serviços</a>
+								</li>
+								
+								<li>
+									<a href="ConsultaQuestionarioAvaliacao.php">Consultar Avaliações</a>
+								</li>
+							</ul>
+						</li>
+						
+					</ul>
+				</nav>
+			</div>
+		
+		<form name="form" method="post" action="Conexoes/salvar.php" onSubmit="return validacao();">
+		<h1 id="titulo-form">CADASTRO USUÁRIO SAP</h1>
+		
+			<br/>
+		
+			<fieldset id="form-interno">
+				
+				<br/>
+				<label for="nome">NOME:</label>
+				<input type="text" name="nome" placeholder="Nome Completo">
+				
+				
+				<label for="sobrenome">SOBRENOME:</label>
+				<input type="text" name="sobrenome" placeholder= "Sobrenome">
+				
+				
+				
+				<label for="prontuario">PRONTUÁRIO:</label>
+				<input type="text" name="prontuario" placeholder="Prontuário">
+				
+				
+				<label for="senha">SENHA:</label>
+				<input type="password" name="senha" placeholder="********">
+				
+				
+				
+				<label for="confirme">CONFIRME A SENHA:</label>
+				<input type="password" name="confirme" placeholder="********">
+				
+			
+				<label for="email">E-MAIL:</label>
+				<input type="email" name="email" placeholder="@etec.sp.gov.br" >
+				
+					
+			</fieldset>
+			
+			
+			<input type="submit" id="btn-cadastrar" name="submit" value="CADASTRAR"/>
+			<input type="reset" id="btn-limpar" value="LIMPAR"/> 
+
+		</form>
+	</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<?php
+	
+	session_start();
+	
+	if(!isset($_SESSION["prontuario"]) || !isset($_SESSION["senha"])) {
+	
+		header("Location: Index.html");
+	
+	}
+	
+?>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cadastro - SAP</title>
+		<link rel="Stylesheet" type="text/css" href="CSS/CSS.css" />
+		<link rel="Stylesheet" type="text/css" href="CSS/Form.css" />
+	</head>
+
+	<body>
+		<div id="container">
+				<div id="header"></div>
+				
+			
+				<input type="checkbox" id="bt_menu">
+				<label for="bt_menu">&#9776;</label>
+			
+				<nav class="menu">
+					<ul>
+						<li>
+							<a href="Home.html">Inicio</a>
+						</li>
+					</ul>
+					
+					<ul>
+						<li><a href="#">Cadastros</a>
+							<ul>
+								<li>
+									<a href="CadastroEstagiario.html">Estagiário</a>
+								</li>
+								
+								<li>
+									<a href="CadastroFuncionario.html">Terceirizado</a>
+								</li>
+							
+								<li>
+									<a href="CadastroUsuarioSAP.html">Usuário SAP</a>
+								</li>
+							</ul>
+						</li>
+						
+						<li><a href="#">Consultar</a>
+							<ul>
+								<li>
+									<a href="ConsultaEstagiario.php">Estagiario</a>
+								</li>
+								
+								<li>
+									<a href="ConsultaFuncionario.php">Terceirizado</a>
+								</li>
+								
+								<li>
+									<a href="ConsultaUsuarioSAP.php">Usuário SAP</a>
+								</li>
+							</ul>
+						</li>
+						
+						<li><a href="#">Questionários</a>
+							<ul>
+								<li>
+									<a href="QuestionarioAvaliacao.php">Avaliações dos serviços</a>
+								</li>
+								
+								<li>
+									<a href="ConsultaQuestionarioAvaliacao.php">Consultar Avaliações</a>
+								</li>
+							</ul>
+						</li>
+						
+					</ul>
+				</nav>
+			</div>
+
+		<form name="form" method="post" action="" onSubmit="return validacao();">
+		
+			<legend>Cadastro</legend><br/>
+			<label for="Nome">Nome:</label>
+			<input type="text" id="nome" placeholder="Escreva seu nome">
+			
+			<label for="rg">RG:</label>
+			<input type="text" id="rg" placeholder="">
+			
+			<label for="cpf">CPF:</label>
+			<input type="text" name="cpf"  id="cpf" placeholder="">
+			
+			<label for="sexo">Sexo:</label>
+				<select name="sexo" id="sexo">
+				<option value="">Selecione</option>
+				<option value="masculino">Masculino</option>
+				<option value="feminino">Feminino</option>
+			</select>
+			<br/><br/>
+			
+			<label for="telefone">Telefone:</label>
+			<input type="text" id="telefone" placeholder="Ex.: (00) 0000-0000">
+			
+			<label for="email">Email:</label>
+			<input type="text" id="email" placeholder="">
+			
+			<label for="estado">Estado:</label>
+			 <select name="uf" id="uf">
+				<option value="">Selecione</option>
+				<option value="AC">Acre</option>
+				<option value="AL">Alagoas</option>
+				<option value="AP">Amapá</option>
+				<option value="AM">Amazonas</option>
+				<option value="BA">Bahia</option>
+				<option value="CE">Ceará</option>
+				<option value="DF">Distrito Federal</option>
+				<option value="ES">Espírito Santo</option>
+				<option value="GO">Goiás</option>
+				<option value="MA">Maranhão</option>
+				<option value="MT">Mato Grosso</option>
+				<option value="MS">Mato Grosso do Sul</option>
+				<option value="MG">Minas Gerais</option>
+				<option value="PA">Pará</option>
+				<option value="PB">Paraíba</option>
+				<option value="PR">Paraná</option>
+				<option value="PE">Pernambuco</option>
+				<option value="PI">Piauí</option>
+				<option value="RJ">Rio de Janeiro</option>
+				<option value="RN">Rio Grande do Norte</option>
+				<option value="RS">Rio Grande do Sul</option>
+				<option value="RO">Rondônia</option>
+				<option value="RR">Roraima</option>
+				<option value="SC">Santa Catarina</option>
+				<option value="SP">São Paulo</option>
+				<option value="SE">Sergipe</option>
+				<option value="TO">Tocantins</option>
+			</select>
+			<br/><br/>
+			
+			<label for="cidade">Cidade:</label>
+			<input type="text" id="cidade" placeholder="">
+			
+			<label for="cep">CEP:</label>
+			<input type="text" id="cep" placeholder="">
+			
+			<br/><br/>
+			
+			<input type="submit" name="submit3" value="REGISTRAR"/>
+		</form>
+	</body>
+</html>

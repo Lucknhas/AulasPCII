@@ -1,0 +1,39 @@
+************************************************************************************************************
+***						   						         ***
+*** FAÇA UM COMENTÁRIO, CASO TENHA FEITO ALTERAÇÕES. - PARA EVITAR MUITAS MENSAGENS NO CHAT DO FACEBOOK- ***
+***						   						         ***
+************************************************************************************************************
+
+
+  - Daniel Gomes - Comentário de alterações -
+
+  * V5 *
+
+Consegui gerar a tabela de consulta do estagiário, montei apenas os esqueletos das outras consultas, pois não vai dar pra mim terminar agora, porém basta repetir o mesmo modelo que eu usei para gerar a tabela de consulta no formulário ConsultaEstagiario.php
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+  - Kelly Souza - Comentário de alterações -
+
+  * V5 *
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+  - Lucas Lima - Comentário de alterações -
+
+  * V5 *
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	-RECOMENDO QUE FAÇAM UMA NOVA V(VERSÃO DO ARQUIVO EX: V2, V4, V5) AO TERMINAREM UMA ATUALIZAÇÃO ANTES DE ENVIAR PARA TODOS-
